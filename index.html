@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Broker Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="screen">
+        <div class="login-container">
+            <h1>📈 Stock Broker Dashboard</h1>
+            <p class="subtitle">Real-time stock tracking system</p>
+            <div class="login-form">
+                <input 
+                    type="email" 
+                    id="emailInput" 
+                    placeholder="Enter your email"
+                    required
+                >
+                <button id="loginBtn">Login</button>
+                <p class="help-text">Enter any email to login (e.g., user@example.com)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Screen -->
+    <div id="dashboardScreen" class="screen hidden">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1>📊 Stock Dashboard</h1>
+                <span id="userEmail" class="user-email"></span>
+            </div>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </header>
+
+        <!-- Main Content -->
+        <div class="dashboard-content">
+            <!-- Stock Subscription Section -->
+            <section class="subscription-section">
+                <h2>Subscribe to Stocks</h2>
+                <div class="stock-selection">
+                    <select id="stockSelect">
+                        <option value="">-- Select a stock --</option>
+                        <option value="GOOG">GOOG - Google</option>
+                        <option value="TSLA">TSLA - Tesla</option>
+                        <option value="AMZN">AMZN - Amazon</option>
+                        <option value="META">META - Meta</option>
+                        <option value="NVDA">NVDA - NVIDIA</option>
+                    </select>
+                    <button id="subscribeBtn">Subscribe</button>
+                </div>
+            </section>
+
+            <!-- Subscribed Stocks Display -->
+            <section class="stocks-section">
+                <h2>Your Subscribed Stocks</h2>
+                <div id="stocksContainer" class="stocks-container">
+                    <p class="empty-state">No stocks subscribed yet. Select a stock above to get started!</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
